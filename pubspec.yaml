@@ -1,0 +1,11 @@
+name: redstone_jwt_plugin
+version: 0.0.1
+description: Redstone Plugin for Json Web Token (JWT) authentification
+
+dependencies:
+  redstone:
+      git:
+        url: git@github.com:redstone-dart/redstone.git
+        ref: be2d24ab2c5c8087f020be117f84d966081aed6a
+  jwt: any
+  symcrypt: any
