@@ -1,6 +1,8 @@
 name: redstone_jwt_plugin
 version: 0.0.1
 description: Redstone Plugin for Json Web Token (JWT) authentification
+author: Hadrien Lejard <hadrien.lejard@gmail.com>
+homepage: https://github.com/lejard-h/redstone_jwt_plugin
 
 dependencies:
   redstone:
