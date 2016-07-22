@@ -1,4 +1,4 @@
 class AuthRequire {
-  final role;
-  const AuthRequire({this.role: 0});
+  final List<String> audience;
+  const AuthRequire({this.audience});
 }
