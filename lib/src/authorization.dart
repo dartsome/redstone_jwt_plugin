@@ -45,6 +45,9 @@ abstract class JwtProvider {
   }
 
   bool isTokenValid(String token, List<String> audience) {
+    if (token == null) {
+      return false;
+    }
     JsonWebToken jwt = decodeToken(token);
     OpenIdJwtClaimSet claimSet = jwt.claimSet;
     Set<ConstraintViolation> violations = claimSet.validate(const JwtClaimSetValidationContext());
