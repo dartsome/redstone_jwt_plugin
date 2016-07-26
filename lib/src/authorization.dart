@@ -51,6 +51,9 @@ abstract class JwtProvider {
     JsonWebToken jwt = decodeToken(token);
     OpenIdJwtClaimSet claimSet = jwt.claimSet;
     Set<ConstraintViolation> violations = claimSet.validate(const JwtClaimSetValidationContext());
+    if (violations.isEmpty && (claimSet?.audience == null || claimSet?.audience?.isEmpty)) {
+      return true;
+    }
     if (violations.isEmpty && claimSet?.audience != null) {
       for (String aud in claimSet.audience) {
         if (audience.contains(aud)) {
